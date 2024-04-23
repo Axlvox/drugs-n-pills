@@ -13,13 +13,13 @@ function CardProduto({ produto }: CardProdutoProps) {
         {produto.titulo}
       </header>
   
-      <img src={produto.foto} className='plant h-12 rounded-full' alt="" />
+      <img src={produto.foto} className='remedy h-12 rounded-full' alt="" />
       
       <div className='p-4 '>
         <h4 className='text-lg font-semibold uppercase'></h4>
-        <p>{produto.texto}</p>
+        <p className='font-semibold'>{produto.texto}</p>
         <img src={produto.imagemUrl} alt="" />
-        <p className='font-semibold'>Categoria:</p>
+        <p className='font-semibold'>Categoria: {produto.categoria.nome}</p>
         <p>{produto.categoria.descricao}</p>
         <p className='font-semibold'>Data:</p>
         <p>{new Intl.DateTimeFormat(undefined, {
@@ -28,7 +28,7 @@ function CardProduto({ produto }: CardProdutoProps) {
         }).format(new Date(produto.data))}</p>
       </div>
       <div className="flex">
-        <Link to={`/editarProduto/${produto.id}`} className='w-full text-slate-100 bg-gray-700 hover:bg-indigo-800 flex items-center justify-center py-2'>
+        <Link to={`/editarProduto/${produto.id}`} className='w-full text-slate-100 bg-gray-600 hover:bg-gray-800 flex items-center justify-center py-2'>
           <button>Editar</button>
         </Link>
         <Link to={`/deletarProduto/${produto.id}`} className='text-slate-100 bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>

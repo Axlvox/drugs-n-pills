@@ -8,7 +8,7 @@ function Navbar() {
       <div className="container flex items-center justify-between text-lg ml-4 mr-4">
         <Link to='/home' className='text-2xl font-bold uppercase flex items-center'>
           <img src={homeLogo} alt="Logo" className='h-auto mr-2 w-8' /> 
-          Farmácia Drug N' Pills
+          Farmácia Drugs N' Pills
         </Link>
 
         <div className='flex gap-10 text-black font-bold' >

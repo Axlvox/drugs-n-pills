@@ -1,15 +1,16 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Produto from '../../../models/Produto';
-import Categoria from '../../../models/Categoria'; // Substitui Tema por Categoria
+import Categoria from '../../../models/Categoria';
 import { buscar, atualizar, cadastrar } from '../../../services/Service';
+import categoriasMock from '../../mocks/categoriasMock';
 
 function FormularioProduto() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
-  const [categorias, setCategorias] = useState<Categoria[]>([]); // Substitui temas por categorias
-  const [categoria, setCategoria] = useState<Categoria>({ id: 0, descricao: '' }); // Substitui tema por categoria
+  const [categorias, setCategorias] = useState<Categoria[]>([]);
+  const [categoria, setCategoria] = useState<Categoria>({ id: 0, descricao: '' });
   const [produto, setProduto] = useState<Produto>({
     id: 0,
     nome: '',
@@ -25,25 +26,25 @@ function FormularioProduto() {
   }
 
   async function buscarCategoriaPorId(id: string) {
-    await buscar(`/categorias/${id}`, setCategoria); // Substitui temas por categorias
+    await buscar(`/categorias/${id}`, setCategoria);
   }
 
   async function buscarCategorias() {
-    await buscar('/categorias', setCategorias); // Substitui temas por categorias
+    await buscar('/categorias', setCategorias);
   }
 
   useEffect(() => {
-    buscarCategorias(); // Substitui buscarTemas por buscarCategorias
+    buscarCategorias();
     if (id !== undefined) {
       buscarProdutoPorId(id);
-      console.log(categoria); // Substitui tema por categoria
+      console.log(categoria);
     }
   }, [id]);
 
   useEffect(() => {
     setProduto({
       ...produto,
-      categoria: categoria, // Substitui tema por categoria
+      categoria: categoria,
     });
   }, [categoria]);
 
@@ -51,7 +52,7 @@ function FormularioProduto() {
     setProduto({
       ...produto,
       [e.target.name]: e.target.value,
-      categoria: categoria, // Substitui tema por categoria
+      categoria: categoria,
     });
   }
 
@@ -136,12 +137,12 @@ function FormularioProduto() {
           <p>Categoria do produto</p>
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
             <option value="" selected disabled>Selecione uma categoria</option>
-            {categorias.map((categoria) => (
-              <option key={categoria.id} value={categoria.id}>{categoria.descricao}</option>
+            {categoriasMock.map((categoria) => (
+              <option key={categoria.descricao} value={categoria.id}>{categoria.nome}</option>
             ))}
           </select>
         </div>
-        <button type='submit' className='rounded bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
+        <button type='submit' className='rounded bg-gray-500 hover:bg-gray-800 text-white font-bold w-1/2 mx-auto block py-2'>
           {id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>
       </form>
