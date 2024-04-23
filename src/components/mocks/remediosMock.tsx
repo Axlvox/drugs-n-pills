@@ -9,7 +9,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-23",
     categoria: categoriasMock[0], // Analgésicos
     preco: 5.99,
-    imagemUrl: "url_da_imagem_1.jpg",
+    imagemUrl: "https://i.imgur.com/4pwY8SR.png",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-24",
     categoria: categoriasMock[0], // Analgésicos
     preco: 7.99,
-    imagemUrl: "url_da_imagem_2.jpg",
+    imagemUrl: "https://i.imgur.com/GwHCZTX.png",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-25",
     categoria: categoriasMock[0], // Analgésicos
     preco: 4.99,
-    imagemUrl: "url_da_imagem_3.jpg",
+    imagemUrl: "https://i.imgur.com/fFSTjFx.png",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-26",
     categoria: categoriasMock[1], // Antiácidos
     preco: 9.99,
-    imagemUrl: "url_da_imagem_4.jpg",
+    imagemUrl: "https://i.imgur.com/TVRjDHn.png",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-27",
     categoria: categoriasMock[2], // Antibióticos
     preco: 12.99,
-    imagemUrl: "url_da_imagem_5.jpg",
+    imagemUrl: "https://i.imgur.com/346E5qh.png",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-28",
     categoria: categoriasMock[0], // Analgésicos
     preco: 6.99,
-    imagemUrl: "url_da_imagem_6.jpg",
+    imagemUrl: "https://i.imgur.com/n4FiqPu.png",
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-29",
     categoria: categoriasMock[1], // Antiácidos
     preco: 8.99,
-    imagemUrl: "url_da_imagem_7.jpg",
+    imagemUrl: "https://i.imgur.com/wM7iRnp.png",
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ const remediosMock: Produto[] = [
     data: "2024-04-30",
     categoria: categoriasMock[3], // Anti-hipertensivos
     preco: 11.99,
-    imagemUrl: "url_da_imagem_8.jpg",
+    imagemUrl: "https://i.imgur.com/1rSNVb9.png",
   },
   {
     id: 9,
@@ -81,7 +81,7 @@ const remediosMock: Produto[] = [
     data: "2024-05-01",
     categoria: categoriasMock[3], // Anti-hipertensivos
     preco: 10.99,
-    imagemUrl: "url_da_imagem_9.jpg",
+    imagemUrl: "https://i.imgur.com/ULshDhK.png",
   },
   {
     id: 10,
@@ -90,7 +90,7 @@ const remediosMock: Produto[] = [
     data: "2024-05-02",
     categoria: categoriasMock[4], // Antidepressivos
     preco: 15.99,
-    imagemUrl: "url_da_imagem_10.jpg",
+    imagemUrl: "https://i.imgur.com/8M7yGNi.png",
   },
   {
     id: 11,
@@ -99,7 +99,7 @@ const remediosMock: Produto[] = [
     data: "2024-05-03",
     categoria: categoriasMock[5], // Antialérgicos
     preco: 8.49,
-    imagemUrl: "url_da_imagem_11.jpg",
+    imagemUrl: "https://i.imgur.com/G2aS5of.png",
   },
   {
     id: 12,
@@ -108,7 +108,7 @@ const remediosMock: Produto[] = [
     data: "2024-05-04",
     categoria: categoriasMock[6], // Estatinas
     preco: 7.99,
-    imagemUrl: "url_da_imagem_12.jpg",
+    imagemUrl: "https://i.imgur.com/5MGPvWz.png",
   },
   {
     id: 13,
@@ -117,7 +117,7 @@ const remediosMock: Produto[] = [
     data: "2024-05-05",
     categoria: categoriasMock[4], // Antidepressivos
     preco: 12.99,
-    imagemUrl: "url_da_imagem_13.jpg",
+    imagemUrl: "https://i.imgur.com/suMEkQ2.png",
   },
   {
     id: 14,
@@ -126,7 +126,7 @@ const remediosMock: Produto[] = [
     data: "2024-05-06",
     categoria: categoriasMock[7], // Anti-inflamatórios não esteroides (AINEs)
     preco: 6.79,
-    imagemUrl: "url_da_imagem_14.jpg",
+    imagemUrl: "https://i.imgur.com/EPp4iTD.png",
   },
   {
     id: 15,
@@ -135,7 +135,7 @@ const remediosMock: Produto[] = [
     data: "2024-05-07",
     categoria: categoriasMock[8], // Hormônios da tireoide
     preco: 9.99,
-    imagemUrl: "url_da_imagem_15.jpg",
+    imagemUrl: "https://i.imgur.com/Zoe2ewQ.png",
   },
 ];
 

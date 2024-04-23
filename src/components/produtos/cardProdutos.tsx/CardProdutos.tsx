@@ -18,6 +18,7 @@ function CardProduto({ produto }: CardProdutoProps) {
       <div className='p-4 '>
         <h4 className='text-lg font-semibold uppercase'></h4>
         <p>{produto.texto}</p>
+        <img src={produto.imagemUrl} alt="" />
         <p className='font-semibold'>Categoria:</p>
         <p>{produto.categoria.descricao}</p>
         <p className='font-semibold'>Data:</p>
