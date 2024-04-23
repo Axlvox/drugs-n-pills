@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CardCategorias from '../cardCategorias/CardCategorias';
 import { buscar } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
-import categoriasMock from '../../../components/mocks/categoriasMock';
 
 //PARTE DE MOCK
 type Props = {

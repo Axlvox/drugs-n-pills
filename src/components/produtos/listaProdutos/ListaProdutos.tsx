@@ -4,13 +4,13 @@ import { buscar } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import CardProduto from '../cardProdutos.tsx/CardProdutos';
 
-import remediosMock from '../../../components/mocks/remediosMock';
+type Props = {
+  produtos: Produto[];
+};
 
-
-function ListaProdutos() {
-    const [produtos, setProdutos] = useState<Produto[]>(remediosMock);
-    const [loading, setLoading] = useState<boolean>(true);
-
+function ListaProdutos({ produtos: produtosProp }: Props) {
+  const [produtos, setProdutos] = useState<Produto[]>(produtosProp);
+  const [loading, setLoading] = useState<boolean>(true);
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -29,7 +29,6 @@ function ListaProdutos() {
 
   return (
     <>
-    
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (
           <CardProduto key={produto.id} produto={produto} />

@@ -3,6 +3,7 @@ import homeLogo from '../../assets/home.png'
 import './Home.css';
 import ListaProdutos from '../../components/produtos/listaProdutos/ListaProdutos';
 import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
+import remediosMock from '../../components/mocks/remediosMock';
 
 
 function Home() {
@@ -25,7 +26,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <ListaProdutos />
+        <ListaProdutos produtos={remediosMock} />
       </>
     );
 }
