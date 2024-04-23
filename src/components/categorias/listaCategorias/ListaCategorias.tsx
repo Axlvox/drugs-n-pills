@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import CardCategorias from '../cardCategorias/CardCategorias';
-import { buscar } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
+import categoriasMock from '../../mocks/categoriasMock';
 
-//PARTE DE MOCK
 type Props = {
   categorias: Categoria[];
 };
@@ -13,8 +12,7 @@ function ListaCategorias({ categorias: categoriasProp }: Props) {
 
   async function buscarCategorias() {
     try {
-      const categoriasData = await buscar('/categorias', {})
-      setCategorias(categoriasData);
+      setCategorias(categoriasMock); 
     } catch (error) {
       console.error('Erro ao buscar categorias:', error);
     }
